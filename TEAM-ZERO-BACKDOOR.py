@@ -1,0 +1,35 @@
+import socket
+print("\nhecho por @OnixBlackHat\n")
+print("███████╗██████╗░██████╗░░█████╗░ ████████╗███████╗░█████╗░███╗░░░███╗")
+print("╚════██║╚════██╗██╔══██╗██╔══██╗ ╚══██╔══╝██╔════╝██╔══██╗████╗░████║")
+print("░░███╔═╝░█████╔╝██████╔╝██║░░██║ ░░░██║░░░█████╗░░███████║██╔████╔██║")
+print("██╔══╝░░░╚═══██╗██╔══██╗██║░░██║ ░░░██║░░░██╔══╝░░██╔══██║██║╚██╔╝██║")
+print("███████╗██████╔╝██║░░██║╚█████╔╝ ░░░██║░░░███████╗██║░░██║██║░╚═╝░██║")
+print("╚══════╝╚═════╝░╚═╝░░╚═╝░╚════╝░ ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝")
+
+print("Ctrl+C para salir de ZERO TEAM backdoor")
+print("\nstart zero para iniciar\n")
+print(input("zero> "))
+#Variables globales
+
+print("\n[+] Especifique el Host atacante:\n")
+host = input("zero$> ")
+print("host -> " + (host))
+print("\n[+] Especifique el puerto para la conexion:\n")
+port = input("zero$> ")
+print("puerto -> " + (port))
+print("\n[+] Especifique el servidor para el ataque:\n")
+servidor = input("zero$> ")
+print("servidor -> " + (servidor))
+print("\n[+] Iniciando ataque al servidor\n") 
+print("\n[+] Modo escucha activandose\n")
+print("\n[+] Modo escucha activado\n")
+conexion = socket.socket()
+conexion.bind( ("192.168.56.1", 443) )
+conexion.listen(1)
+
+while True:
+    conexion, address = conexion.accept()
+    print("[+] Conexion establecida")
+    print(address)
+    conexion.close()
